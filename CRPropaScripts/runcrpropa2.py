@@ -36,6 +36,8 @@ def MakePhotons(nsample = 100, include_cmb = True, include_irb = True):
     obs.onDetection(t)
     sim.add(obs)
     #define the source(s)
+    #here, the source is located 2 Mpc away from the observer along the x-axis and emission from the source follows a power law spectrum with a redshift evolution
+    # m = 3.4 for 0.001 < z < 1 and -0.3 for 1.001 < z < 4
     source = Source()
     source.add(SourceUniformSphere(Vector3d(2, 0, 0) * Mpc,0*Mpc))
     source.add(SourceIsotropicEmission())
